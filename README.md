@@ -6,13 +6,15 @@ speex-devel 或 libspeex.
 lame
 
 #编译方法
-yum instal speex-devel 
+yum install speex-devel 
 cd spx2wav
 make
-cp spx2dev /usr/local/bin
+cp spx2wav /usr/local/bin
 
 #使用
-spx2dev voice.speex voice.wav
+spx2wav voice.speex voice.wav
+
+exec('/usr/local/bin/spx2wav /home/cgtx/voice.speex voice.wav');
 
 #结合 lame 使用
 /usr/local/bin/spx2dev voice.speex voice.wav && /usr/local/bin/lame -S -V 9 voice.wav voice.mp3 && rm -f voice.wav
